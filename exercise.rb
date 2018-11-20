@@ -6,3 +6,14 @@ def to_camel_case(str)
     str.split('-').inject([]){ |buffer,e| buffer.push(buffer.empty? ? e : e.capitalize) }.join
   end
 end
+
+
+def expanded_form(num)
+  array = num.to_s.split("")
+  multi = 10 ** array.length
+  array.each do |num|
+    new_array << num * multi
+    multi = multi/10
+  end
+  puts new_array
+end
