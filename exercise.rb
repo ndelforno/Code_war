@@ -9,11 +9,16 @@ end
 
 
 def expanded_form(num)
+  new_array = []
   array = num.to_s.split("")
   multi = 10 ** array.length
   array.each do |num|
-    new_array << num * multi
+    if num != '0'
+    new_array << (num.to_i * multi)/10
+    end
     multi = multi/10
   end
-  puts new_array
+  new_array.join(" + ")
 end
+
+expanded_form(70304)
