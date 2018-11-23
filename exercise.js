@@ -23,3 +23,8 @@ function friend(friends){
   }
   return array
 }
+
+// #Remove First and Last Character
+function removeChar(str){
+  return str.slice(1, str.length-1)
+};
