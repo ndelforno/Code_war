@@ -12,3 +12,14 @@ function divisors(integer) {
   }
 
 };
+
+function friend(friends){
+  //your code here
+  var array = []
+  for (var i = 0; i < friends.length; i++) {
+    if (friends[i].length === 4){
+      array.push(friends[i])
+    }
+  }
+  return array
+}
