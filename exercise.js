@@ -28,3 +28,10 @@ function friend(friends){
 function removeChar(str){
   return str.slice(1, str.length-1)
 };
+
+// Regex validate PIN code
+function validatePIN (pin) {
+  //return true or false
+  if ( (pin.match(/^[0-9]+$/) != null) && (pin.length === 4 || pin.length ===6)){
+  return true} else return false
+}
