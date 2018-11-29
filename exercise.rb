@@ -31,3 +31,9 @@ def digitize(n)
    array.each{|n| result << n.to_i}
    result.reverse
 end
+
+# Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+def double_char(str)
+  # Your code here
+  str.split("").map{|char| char*2}.join
+end
