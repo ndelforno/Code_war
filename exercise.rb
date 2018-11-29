@@ -22,3 +22,12 @@ def expanded_form(num)
 end
 
 expanded_form(70304)
+
+#Convert number to reversed array of digits
+
+def digitize(n)
+   result = []
+   array = n.to_s.split("")
+   array.each{|n| result << n.to_i}
+   result.reverse
+end
