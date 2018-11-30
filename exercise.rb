@@ -37,3 +37,8 @@ def double_char(str)
   # Your code here
   str.split("").map{|char| char*2}.join
 end
+
+#Reversed Strings
+def solution(str)
+  return str.split("").reverse.join
+end
