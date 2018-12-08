@@ -42,3 +42,19 @@ end
 def solution(str)
   return str.split("").reverse.join
 end
+
+#Sum of a sequence
+
+def sequence_sum(begin_number, end_number, step)
+  #your code here
+  sum = begin_number
+  if begin_number > end_number
+    return 0
+  else
+    until (begin_number + step) > end_number
+      begin_number += step
+      sum += begin_number
+    end
+  end
+  return sum
+end
