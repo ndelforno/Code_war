@@ -58,3 +58,19 @@ def sequence_sum(begin_number, end_number, step)
   end
   return sum
 end
+
+#Sum of numbers from 0 to N
+def self.show_sequence(n)
+    sum = 0
+    sequence ="0"
+    if n < 0
+      return "#{n}<0"
+    elsif n == 0
+      return "0=0"
+    else
+     for i in 1..n do
+       sum += i
+       sequence += "+#{i}"
+      end
+      sequence + " = #{sum}"
+    end
