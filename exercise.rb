@@ -74,3 +74,8 @@ def self.show_sequence(n)
       end
       sequence + " = #{sum}"
     end
+
+#The highest profit wins!
+def min_max(lst)
+  return [lst.min,lst.max]
+end
