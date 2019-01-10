@@ -32,9 +32,8 @@ def score( dice )
     score = number_of_1 * 100
   end
 
-  if p number_of_1 > 3
+  if  number_of_1 > 3
     score =+ 1000 + (number_of_1 - 3) * 100
-    p score
   end
 
   if number_of_5 == 3
@@ -42,32 +41,32 @@ def score( dice )
   end
 
   if number_of_5 < 3
-    score = number_of_5 * 50
+    score += number_of_5 * 50
   end
 
   if number_of_5 > 3
     score = 500 + (number_of_5 - 3) * 50
   end
 
-  if number_of_6 == 3
+  if number_of_6 >= 3
     score += 600
   end
 
-  if number_of_4 == 3
+  if number_of_4 >= 3
     score += 400
   end
 
-  if number_of_3 == 3
+  if number_of_3 >= 3
     score += 300
   end
 
-  if number_of_2 == 3
+  if number_of_2 >= 3
     score += 200
   end
 
-  return p score
+  return score
 
 
 end
 
-p score([1, 1, 1, 3, 1])
+p score([3,3,3,3,3])
