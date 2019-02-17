@@ -4,22 +4,18 @@ def contains_duplicate(nums)
     nums.each do |num|
        current_num = num
           if my_hash.has_key?(current_num)
-              my_hash[current_num] = 2
+              my_hash[current_num] += 1
           else
               my_hash[current_num] = 1
           end
-    end
-    p my_hash
-    my_hash.each do |k, v|
-      if v == 2
-        return true
-      else
-        return false
       end
     end
-  else
+    my_hash.each do |k, v|
+      if v > 1
+        return true
+      end
+    end
     return false
-  end
 end
 
 nums = [2,14,18,22,22]
